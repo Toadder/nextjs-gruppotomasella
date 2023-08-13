@@ -1,0 +1,7 @@
+.icons {
+	@apply items-center lg:gap-x-1.5 gap-x-3 relative z-3;
+
+	.cart {
+		@apply lg:text-lg md:text-2xl text-xl transition-colors border-2 border-grey lg:w-9 lg:h-9 md:w-12 md:h-12 w-10 h-10 rounded-xl flex items-center justify-center hover:border-orange hover:bg-orange hover:text-white;
+	}
+}

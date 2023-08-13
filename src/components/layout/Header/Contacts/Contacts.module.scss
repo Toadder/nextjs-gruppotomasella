@@ -1,0 +1,32 @@
+@import '@/assets/styles/vars.scss';
+
+.socials {
+	@apply flex items-center lg:justify-end lg:gap-x-2.5 md:gap-x-3.5 gap-x-3;
+
+	.social {
+		> a {
+			@apply block transition-colors hover:text-orange;
+
+			> svg {
+				font-size: rem(22);
+
+				@media (max-width: $lg) {
+					font-size: rem(40);
+				}
+				@media (max-width: $md) {
+					font-size: rem(32);
+				}
+			}
+		}
+	}
+}
+
+.phones {
+	@apply lg:space-y-1 space-y-3 lg:mt-1.5 mt-3 inline-block;
+
+	.phone {
+		a {
+			@apply lg:text-base md:text-3xl text-2xl block border-b-2 border-grey transition-opacity hover:opacity-70;
+		}
+	}
+}

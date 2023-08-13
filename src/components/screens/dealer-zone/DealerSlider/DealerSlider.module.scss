@@ -1,0 +1,21 @@
+.outer {
+	.slider {
+		@apply overflow-visible;
+	}
+
+	.slide {
+		@apply w-auto py-1.5;
+
+		> a {
+			@apply md:text-2xl rounded-3xl text-center md:py-2 py-1 md:px-7 px-5 border border-grey transition-colors hover:text-white hover:bg-grey;
+
+			&.active {
+				@apply text-white bg-grey;
+			}
+		}
+
+		&:not(:first-child) {
+			padding-left: 13px;
+		}
+	}
+}

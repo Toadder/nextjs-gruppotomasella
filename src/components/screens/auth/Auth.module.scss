@@ -1,0 +1,29 @@
+@import '@/assets/styles/vars.scss';
+
+.root {
+	.inner {
+		@apply container md:space-y-6 space-y-4;
+	}
+
+	.form {
+		@apply md:space-y-4 space-y-3;
+	}
+
+	.buttons {
+		@apply grid md:grid-cols-2 gap-x-2 gap-y-3;
+
+		> a {
+			@apply btn-secondary md:text-xl flex items-center justify-center;
+			height: rem(50);
+		}
+	}
+
+	.submit {
+		@apply btn-primary block w-full md:text-xl;
+		height: rem(50);
+	}
+
+	.password {
+		@apply text-white underline cursor-pointer md:text-lg transition-opacity hover:opacity-70 inline-block;
+	}
+}

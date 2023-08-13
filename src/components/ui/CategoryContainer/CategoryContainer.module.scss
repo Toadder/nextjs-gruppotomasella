@@ -1,0 +1,11 @@
+.wrapper {
+	@apply container grid lg:grid-cols-8 grid-cols-1 gap-x-7 gap-y-4;
+
+	> *:nth-child(1) {
+		@apply lg:col-span-2;
+	}
+
+	> *:nth-child(2) {
+		@apply lg:col-span-6;
+	}
+}

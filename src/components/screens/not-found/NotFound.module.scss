@@ -1,0 +1,18 @@
+.root {
+
+	.inner {
+		@apply container text-center;
+	}
+
+	.title {
+		@apply md:text-8xl text-6xl font-bold leading-none;
+	}
+
+	.text {
+		@apply md:text-2xl text-lg leading-tight mt-1;
+	}
+
+	.link {
+		@apply inline-block btn-primary md:text-xl text-lg md:py-2 py-1.5 md:px-8 px-2 mt-4 md:w-auto w-full;
+	}
+}

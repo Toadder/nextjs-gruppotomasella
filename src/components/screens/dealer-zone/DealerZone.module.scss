@@ -1,0 +1,17 @@
+.root {
+	.inner {
+		@apply container md:space-y-5 space-y-4;
+	}
+
+	.main {
+		@apply md:space-y-5 space-y-4;
+	}
+
+	.logout {
+		@apply flex justify-center;
+
+		> button {
+			@apply btn-primary md:text-2xl text-lg md:py-2 py-1.5 md:px-6 px-2 font-semibold md:w-auto w-full;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+@import '@/assets/styles/vars.scss';
+
+.root {
+	.inner {
+		@apply container md:space-y-6 space-y-4;
+	}
+
+	.form {
+		@apply md:space-y-4 space-y-3;
+	}
+
+	.submit {
+		@apply btn-primary block w-full md:text-xl;
+		height: rem(50);
+	}
+
+	.link {
+		@apply text-white underline cursor-pointer md:text-lg transition-opacity hover:opacity-70 inline-block;
+	}
+
+	.message {
+		@apply leading-snug mx-auto md:text-sm text-xs;
+		max-width: rem(750);
+
+		a {
+			@apply underline inline-block;
+		}
+	}
+}

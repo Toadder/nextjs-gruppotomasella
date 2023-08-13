@@ -1,0 +1,57 @@
+@import '@/assets/styles/vars.scss';
+
+.input {
+	@apply block w-full text-grey placeholder:text-grey rounded-xl border border-grey md:text-xl md:px-5 px-4;
+	height: rem(50);
+}
+
+.passwordInput {
+	@apply relative;
+
+	.eye {
+		@apply absolute top-1/2 -translate-y-1/2 right-4 text-xl cursor-pointer p-1;
+	}
+
+	.input {
+		@apply pr-12;
+	}
+}
+
+.checkbox {
+	@apply text-left;
+
+	input {
+		@apply hidden;
+
+		&:checked + label::after {
+			@apply opacity-100;
+		}
+	}
+
+	label {
+		@apply relative md:text-lg text-sm inline-flex items-center gap-x-2 cursor-pointer leading-tight;
+
+		&::before {
+			content: '';
+			@apply block md:w-7 md:h-7 w-6 h-6 rounded-full border border-grey bg-white self-start flex-shrink-0;
+		}
+
+		&::after {
+			content: '';
+			@apply absolute block top-1 left-1 md:w-5 md:h-5 w-4 h-4 rounded-full bg-orange opacity-0 transition-opacity;
+		}
+
+		a {
+			@apply underline transition-opacity hover:opacity-70;
+		}
+	}
+}
+
+.textarea {
+	@apply block w-full text-grey placeholder:text-grey rounded-xl border border-grey md:text-xl md:px-5 px-4 py-2.5 resize-none;
+	height: rem(140);
+
+	@media(max-width: $md) {
+		height: rem(115);
+	}
+}

@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@/assets/styles/vars.scss';
+
+* {
+	box-sizing: border-box;
+}
+*:focus,
+*:active {
+	outline: none;
+}
+
+body {
+	@apply text-grey;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+.layout {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	font-weight: 300;
+}
+
+.main {
+	flex: 1 0 auto;
+
+	@media (max-width: $lg) {
+		margin-top: 85px;
+	}
+	@media (max-width: $md) {
+		margin-top: 76px;
+	}
+}
+
+.section {
+	@apply md:py-6 py-5;
+}

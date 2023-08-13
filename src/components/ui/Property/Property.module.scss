@@ -1,0 +1,11 @@
+.property {
+	@apply flex items-center gap-x-2 flex-wrap;
+
+	.value {
+		@apply flex items-center flex-wrap gap-x-2;
+	}
+
+	a {
+		@apply underline transition-colors hover:text-orange;
+	}
+}

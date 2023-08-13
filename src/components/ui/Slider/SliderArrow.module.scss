@@ -1,0 +1,11 @@
+@import '@/assets/styles/functions.scss';
+
+.arrow {
+	@apply text-white text-xl flex items-center justify-center cursor-pointer transition-colors btn-primary;
+	width: rem(45);
+	height: rem(45);
+
+	&.next {
+		@apply rotate-180;
+	}
+}

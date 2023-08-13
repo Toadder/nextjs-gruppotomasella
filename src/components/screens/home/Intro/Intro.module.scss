@@ -1,0 +1,68 @@
+@import '@/assets/styles/vars.scss';
+
+.root {
+	@apply pb-6;
+
+	.inner {
+		@apply mx-auto relative;
+		max-width: rem(1270);
+	}
+
+	.slider {
+	}
+
+	.slide {
+		@apply flex items-center xl:px-16 md:px-8 px-4;
+		min-height: rem(500);
+	}
+
+	.card {
+		@apply relative z-1 text-white lg:px-10 md:px-8 px-6 lg:py-12 md:py-9 py-6 w-full rounded-xl md:text-left text-center;
+		background-color: rgba(0, 0, 0, 0.75);
+		max-width: rem(600);
+
+		&.active {
+			@apply visible opacity-100;
+
+			> div,
+			> p,
+			> span {
+				@apply opacity-100 visible delay-500 duration-500;
+			}
+		}
+
+		@media(max-width: $xl) {
+			max-width: 100%;
+		}
+
+		> div,
+		> p,
+		> span {
+			@apply transition-all delay-0 duration-200 opacity-0 invisible;
+		}
+
+		> div {
+			@apply uppercase font-bold md:text-4xl text-3xl;
+		}
+
+		> p {
+			@apply md:mt-3 mt-2 md:text-xl text-lg font-medium leading-snug;
+		}
+
+		> span {
+			@apply md:mt-4 mt-3 md:inline-block block md:w-auto w-full;
+
+			> a {
+				@apply btn-primary inline-block md:text-lg text-base md:px-7 px-4 md:py-2 py-1.5 w-full;
+			}
+		}
+	}
+
+	.bg {
+		@apply image-like-bg;
+	}
+
+	.arrows {
+		@apply absolute bottom-6 xl:right-8 right-6 z-1 flex md:gap-x-2 gap-x-3;
+	}
+}

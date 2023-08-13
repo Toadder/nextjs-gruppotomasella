@@ -1,0 +1,39 @@
+@import '@/assets/styles/functions.scss';
+
+.content {
+	@apply md:space-y-4 space-y-2 md:text-left text-center lg:pt-0 pt-4 lg:border-none border-t-2 border-grey;
+
+	.main {
+		@apply lg:pt-1.5 md:pt-2 pt-3 space-y-5;
+	}
+
+	.items {
+		@apply grid gap-x-5 lg:gap-y-5 gap-y-4;
+		grid-template-columns: repeat(auto-fit, minmax(rem(240), 1fr));
+	}
+
+	.item {
+		@media(any-hover: hover) {
+			&:hover .image > img {
+				@apply scale-125;
+			}
+		}
+
+		> a {
+			@apply space-y-1;
+		}
+
+		.image {
+			@apply overflow-hidden;
+			height: rem(185);
+
+			> img {
+				@apply object-cover w-full h-full transition-transform duration-400;
+			}
+		}
+
+		.title {
+			@apply text-lg text-left;
+		}
+	}
+}

@@ -1,0 +1,10 @@
+.root {
+
+	.inner {
+		@apply container md:space-y-6 space-y-4;
+	}
+
+	.title {
+		@apply md:text-2xl text-lg font-bold leading-snug;
+	}
+}

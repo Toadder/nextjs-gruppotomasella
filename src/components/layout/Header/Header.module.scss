@@ -1,0 +1,100 @@
+@import '@/assets/styles/vars.scss';
+
+.header {
+	@apply lg:pt-7 lg:pb-2 md:py-4 py-3 lg:relative fixed w-full z-3;
+
+	&::before {
+		content: '';
+		@apply bg-white absolute top-0 left-0 z-2 w-full h-full lg:hidden block;
+	}
+
+	.body {
+		@apply container lg:space-y-8;
+	}
+
+	.main {
+		@apply flex-center-between lg:gap-x-6 gap-x-3;
+	}
+
+	.logo {
+		@apply lg:-ml-[19px] lg:w-[322px] lg:h-[60px] h-auto md:w-[280px] w-[57px] overflow-hidden flex-shrink-0 relative z-3 lg:mr-0 mr-auto;
+
+		> img {
+			@apply md:w-full w-[280px] md:max-w-full max-w-none;
+		}
+	}
+
+	.wrapper {
+		@apply lg:flex-center-between gap-x-6 gap-y-1;
+	}
+
+	.menu {
+		@apply lg:space-y-0 md:space-y-8 space-y-6 lg:overflow-y-visible overflow-y-auto transition-transform duration-300 lg:translate-y-0 -translate-y-full lg:static fixed z-1 top-0 left-0 w-full h-full bg-white lg:px-0 px-4;
+
+		@media (max-width: $lg) {
+			padding-top: rem(125);
+			padding-bottom: rem(40);
+		}
+		@media (max-width: $md) {
+			padding-top: rem(95);
+			padding-bottom: rem(30);
+		}
+
+		&.active {
+			@apply translate-y-0;
+		}
+	}
+
+	.burger {
+		@apply lg:hidden block relative cursor-pointer z-2;
+		min-width: rem(44);
+		height: rem(35);
+
+		@media (max-width: $md) {
+			min-idth: rem(40);
+			height: rem(30);
+		}
+
+		&::before,
+		&::after {
+			@apply absolute left-0 w-full bg-grey rounded-xl transition-all;
+			content: '';
+			height: rem(5);
+		}
+
+		&::before {
+			@apply top-0;
+		}
+
+		&::after {
+			@apply bottom-0;
+		}
+
+		> span {
+			@apply absolute left-0 w-full bg-grey rounded-xl top-1/2 -translate-y-1/2 transition-opacity;
+			height: rem(5);
+		}
+
+		&.active {
+			span {
+				@apply opacity-0;
+			}
+			&::before {
+				@apply rotate-45;
+				top: rem(15);
+
+				@media (max-width: $md) {
+					top: rem(12);
+				}
+			}
+			&::after {
+				@apply -rotate-45;
+				bottom: rem(15);
+
+				@media (max-width: $md) {
+					bottom: rem(13);
+				}
+			}
+		}
+	}
+}

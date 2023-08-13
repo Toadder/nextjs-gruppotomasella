@@ -1,0 +1,55 @@
+@import '@/assets/styles/vars.scss';
+
+.search {
+
+	.trigger {
+		@apply cursor-pointer lg:text-lg md:text-2xl text-xl transition-colors border-2 border-grey lg:w-9 lg:h-9 md:w-12 md:h-12 w-10 h-10 rounded-xl flex items-center justify-center hover:border-orange hover:bg-orange hover:text-white;
+	}
+
+	.main {
+		@apply fixed top-0 left-0 w-full h-full md:bg-opacity-80 md:bg-black bg-white;
+	}
+
+	.backdrop {
+		@apply absolute top-0 left-0 w-full h-full -z-1;
+	}
+
+	.inner {
+		@apply md:p-4 mx-auto space-y-3 h-full;
+		max-width: rem(800);
+
+		@media(max-width: $md) {
+			max-width: 100%;
+		}
+	}
+
+	.field {
+		@apply relative;
+		height: rem(38);
+
+		@media(max-width: $lg) {
+			height: rem(50);
+		}
+
+		input {
+			@apply block w-full md:rounded-md h-full md:px-10 px-11 md:border-b-0 border-b-2 border-grey placeholder:text-grey;
+		}
+
+		.closeIcon, .searchIcon {
+			@apply absolute top-1/2 -translate-y-1/2 text-lg md:px-2.5 py-4 p-3;
+		}
+
+		.closeIcon {
+			@apply h-full flex items-center justify-center right-0 cursor-pointer text-xl;
+		}
+
+		.searchIcon {
+			@apply left-0;
+		}
+
+	}
+
+	.items {
+		@apply hidden;
+	}
+}

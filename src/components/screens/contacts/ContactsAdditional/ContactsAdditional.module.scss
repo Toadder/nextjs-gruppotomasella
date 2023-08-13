@@ -1,0 +1,11 @@
+.additional {
+	@apply md:space-y-3 space-y-2 md:pt-6 pt-4 border-t-2 border-grey;
+
+	.properties {
+		@apply md:space-y-0 space-y-2;
+	}
+
+	.img {
+		@apply flex items-center justify-center pt-2;
+	}
+}

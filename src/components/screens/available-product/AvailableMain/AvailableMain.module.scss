@@ -1,0 +1,37 @@
+.main {
+	@apply lg:col-span-2 col-span-5 md:space-y-5 space-y-4 flex flex-col justify-center;
+
+	> :not(:first-child) {
+		@apply md:pt-5 pt-4 border-t-2 border-grey;
+	}
+
+	.head {
+		@apply md:space-y-1 space-y-0.5;
+
+		.item {
+			@apply flex flex-wrap gap-x-2 md:text-xl text-lg;
+		}
+	
+		.prices {
+			@apply md:text-3xl text-2xl font-semibold;
+		}
+
+		.priceOld {
+			@apply md:text-xl text-lg line-through font-normal;
+		}
+	}
+
+	.description {
+		@apply space-y-0.5;
+
+		> div {
+			@apply space-y-0.5;
+		}
+	}
+
+	.foot {
+		> a {
+			@apply btn-primary md:text-2xl text-xl md:p-3 p-2 block;
+		}
+	}
+}

@@ -1,0 +1,69 @@
+@import '@/assets/styles/vars.scss';
+
+.item {
+	@media (any-hover: hover) {
+		&:hover {
+			.link {
+				@apply translate-y-0;
+			}
+		}
+	}
+
+	.content {
+		@apply relative flex justify-center items-start overflow-hidden md:pt-12 pt-9 pb-16;
+		min-height: rem(450);
+	}
+
+	.card {
+		@apply relative z-1 rounded-xl shadow-primary border-4 border-orange p-3 text-center mx-4 w-full;
+		background-color: rgba(255, 255, 255, 0.9);
+		max-width: rem(350);
+
+		> div {
+			@apply uppercase text-orange font-bold text-lg;
+		}
+
+		> ul {
+			@apply mt-0.5 space-y-0.5;
+
+			> li {
+				> a {
+					@apply font-medium relative pl-3.5 transition-colors;
+
+					&::before {
+						content: '';
+						@apply absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-grey transition-colors;
+						width: rem(5);
+						height: rem(5);
+					}
+
+					@media (any-hover: hover) {
+						&:hover {
+							@apply text-orange;
+
+							&::before {
+								@apply bg-orange;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.bg {
+		@apply image-like-bg;
+	}
+
+	.link {
+		@apply absolute z-1 bottom-0 left-0 w-full text-center transition-all bg-grey text-white py-2.5 hover:bg-[#262626] translate-y-full;
+
+		@media ((any-hover: none) or (max-width: $lg)) {
+			transform: translateY(0);
+		}
+	}
+
+	.description {
+		@apply md:p-3 pt-3 pb-0 leading-snug;
+	}
+}

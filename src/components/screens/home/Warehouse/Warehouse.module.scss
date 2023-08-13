@@ -1,0 +1,41 @@
+@import '@/assets/styles/vars.scss';
+
+.root {
+	@apply border-t-2 border-grey md:pt-6 pt-3 mx-auto;
+	max-width: rem(1270);
+
+	.inner {
+		@apply relative md:mt-6 mt-3 md:py-7 py-5 flex items-center justify-center;
+		min-height: rem(310);
+
+		@media (max-width: $md) {
+			min-height: rem(290);
+		}
+	}
+
+	.card {
+		@apply relative z-1 text-center lg:py-7 md:py-6 py-4 md:px-5 px-3 rounded-xl shadow-primary md:border-8 border-4 border-orange max-w-full mx-4;
+		width: rem(475);
+		background-color: rgba(255, 255, 255, 0.925);
+
+		@media (max-width: $lg) {
+			width: rem(425);
+		}
+
+		> div {
+			@apply font-medium md:text-2xl text-xl;
+		}
+
+		> ul {
+			@apply md:mt-2 mt-1 md:space-y-2 space-y-1;
+
+			> li > a {
+				@apply font-medium  md:text-2xl text-xl transition-colors hover:text-orange underline;
+			}
+		}
+	}
+
+	.bg {
+		@apply image-like-bg;
+	}
+}

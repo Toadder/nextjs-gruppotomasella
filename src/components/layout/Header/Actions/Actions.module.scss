@@ -1,0 +1,11 @@
+.actions {
+	@apply lg:space-y-1 md:space-y-3 space-y-2;
+
+	.action {
+		@apply lg:text-center transition-opacity hover:opacity-70;
+
+		a {
+			@apply lg:normal-case uppercase lg:text-base md:text-3xl text-2xl text-grey lg:px-3 border-b-grey border-b-2  lg:block;
+		}
+	}
+}

@@ -1,0 +1,46 @@
+@import '@/assets/styles/vars.scss';
+
+.sidebar {
+	@apply space-y-3;
+
+	.collection {
+		@apply lg:space-y-1 lg:text-left text-center;
+
+		&:not(:first-child) {
+			@apply pt-3 border-t-2 border-grey;
+		}
+
+		> div {
+			@apply lg:text-3xl md:text-2xl text-xl leading-none flex items-center lg:justify-start justify-center gap-x-1;
+
+			&.active {
+				> svg {
+					@apply rotate-180;
+					margin-bottom: -2.5px;
+				}
+			}
+
+			> svg {
+				@apply lg:hidden transition-all;
+				margin-bottom: 0;
+			}
+		}
+
+		.wrapper {
+			@apply lg:block hidden;
+		}
+
+		> ul {
+			@apply space-y-1;
+
+			> li {
+				&:first-child {
+					@apply lg:mt-0 mt-2;
+				}
+				> a {
+					@apply lg:text-lg md:text-xl transition-colors hover:text-orange;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,95 @@
+@import '@/assets/styles/vars.scss';
+
+.nav {
+	.ul {
+		@apply flex lg:flex-row flex-col lg:items-center flex-wrap lg:gap-y-1 md:gap-y-3 gap-y-2;
+
+		> li {
+			@apply transition-colors hover:text-orange inline-block;
+
+			@media (any-hover: hover) {
+				&:hover {
+					> span > svg {
+						transform: rotate(180deg);
+						margin-top: 0;
+						@apply text-orange;
+					}
+
+					.submenu {
+						@apply lg:block;
+					}
+				}
+			}
+
+			&:first-child > a, &:first-child > span {
+				@apply pl-0;
+			}
+
+			> a,
+			> span {
+				@apply lg:py-1.5 lg:px-3 lg:text-base md:text-3xl text-2xl cursor-pointer uppercase font-semibold inline-flex items-center gap-x-0.5;
+
+				> svg {
+					@apply transition-all;
+					margin-top: -2.5px;
+				}
+			}
+
+			> span {
+				&.opened {
+					> svg {
+						transform: rotate(180deg);
+						margin-top: 0;
+					}
+				}
+			}
+
+			&:not(:first-child) {
+				@apply lg:border-l-2 border-grey;
+			}
+		}
+	}
+
+	.submenu {
+		@apply lg:hidden lg:absolute w-full lg:py-2 z-1 lg:transition-all lg:left-0;
+		width: rem(1270);
+
+		@media (max-width: $container) {
+			width: calc(100vw - 30px);
+		}
+
+		@media(max-width: $md) {
+			width: auto;
+		}
+
+		.inner {
+			@apply lg:space-y-0 md:space-y-4 space-y-3 lg:grid lg:gap-y-5 lg:gap-x-6 lg:px-4 md:pl-3 pl-2 lg:py-5 md:py-3 py-2 bg-white lg:shadow-primary rounded-lg w-full;
+			grid-template-columns: repeat(auto-fit, minmax(rem(290), 1fr));
+		}
+
+		.column {
+			@apply text-grey;
+
+			> div {
+				@apply uppercase font-semibold;
+				font-size: rem(19);
+
+				@media (max-width: $lg) {
+					font-size: rem(22);
+				}
+				@media (max-width: $md) {
+					font-size: rem(20);
+				}
+			}
+
+			> ul {
+				@apply space-y-1 mt-1 lg:pl-0 md:pl-3 pl-2;
+				> li {
+					> a {
+						@apply transition-colors hover:text-orange lg:text-lg text-xl font-medium;
+					}
+				}
+			}
+		}
+	}
+}

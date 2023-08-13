@@ -1,0 +1,17 @@
+.pagination {
+	@apply flex items-center justify-center gap-x-4 gap-y-2 flex-wrap;
+
+	&-prev, &-next {
+		&.disabled {
+			@apply hidden;
+		}
+	}
+
+	&-item--active &-link {
+		@apply bg-grey text-white;
+	}
+
+	&-link {
+	@apply flex items-center justify-center rounded-full w-8 h-8 border border-grey leading-none text-sm transition-colors hover:bg-grey hover:text-white;
+	}
+}

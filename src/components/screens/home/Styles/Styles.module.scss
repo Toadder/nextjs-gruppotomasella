@@ -1,0 +1,17 @@
+@import '@/assets/styles/vars.scss';
+
+.root {
+	@apply container;
+
+	.inner {
+		@apply grid lg:gap-7 gap-5;
+		grid-template-columns: repeat(auto-fit, minmax(rem(400), 1fr));
+
+		@media (max-width: $lg) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: $md) {
+			grid-template-columns: 1fr;
+		}
+	}
+}

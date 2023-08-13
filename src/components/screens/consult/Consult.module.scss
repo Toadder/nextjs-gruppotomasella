@@ -1,0 +1,20 @@
+@import '@/assets/styles/vars.scss';
+
+.root {
+	.inner {
+		@apply container md:space-y-6 space-y-4;
+	}
+
+	.top {
+		@apply md:space-y-2 space-y-1.5;
+	}
+
+	.form {
+		@apply md:space-y-4 space-y-3;
+	}
+
+	.submit {
+		@apply btn-primary block w-full md:text-xl;
+		height: rem(50);
+	}
+}

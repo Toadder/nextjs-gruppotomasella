@@ -1,0 +1,6 @@
+@import '@/assets/styles/vars.scss';
+
+.card {
+	@apply shadow-primary text-center space-y-4 bg-grey lg:py-8 py-6 lg:px-10 md:px-6 px-3 mx-auto rounded-xl;
+	max-width: rem(750);
+}

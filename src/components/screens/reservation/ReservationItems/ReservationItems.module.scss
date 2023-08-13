@@ -1,0 +1,88 @@
+@import '@/assets/styles/vars.scss';
+
+.items {
+	@apply md:space-y-4 space-y-1.5;
+
+	.gridContainer {
+		@apply grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 lg:text-base text-lg;
+	}
+
+	.row {
+		@apply grid lg:grid-cols-6 lg:py-0 py-4 lg:space-y-0 md:space-y-3 space-y-2.5 border-grey;
+
+		&:not(:last-child) {
+			@apply lg:border-b-2 md:border-b-0 border-b-2;
+		}
+
+		&:nth-child(n + 4) {
+			@apply lg:border-t-0 md:border-t-2;
+		}
+
+		&:nth-child(even) {
+			@apply lg:border-r-0 md:border-r-2;
+		}
+
+		> * {
+			@apply lg:p-3 md:px-4 flex flex-col items-center justify-center;
+
+			&:not(:first-child) {
+				@apply lg:border-l-2 border-grey;
+			}
+		}
+
+		&.headings {
+			@apply font-semibold text-center leading-none lg:grid hidden;
+		}
+	}
+
+	.item {
+		.img {
+			a {
+				@apply w-full;
+				height: rem(113);
+
+				@media (max-width: $lg) {
+					height: rem(210);
+				}
+			}
+
+			img {
+				@apply object-cover w-full h-full;
+			}
+		}
+
+		.main {
+			a {
+				@apply underline;
+			}
+		}
+
+		.properties {
+			@apply text-center lg:space-y-1.5 space-y-1;
+		}
+
+		.count {
+			@apply flex-row gap-x-3;
+
+			.remove,
+			.add {
+				@apply rounded-md w-8 h-8 text-lg flex items-center justify-center border-2 border-grey transition-colors hover:border-orange hover:bg-orange hover:text-white;
+			}
+		}
+
+		.price,
+		.sum {
+			> div:first-child {
+				@apply lg:hidden block;
+			}
+		}
+	}
+
+	.total {
+		@apply text-center lg:text-lg text-2xl flex items-center justify-center gap-x-2 flex-wrap;
+
+		> div:nth-child(2) {
+			@apply font-bold;
+		}
+	}
+}

@@ -16,6 +16,7 @@
 	}
 
 	.map {
+		@apply bg-orange bg-opacity-70;
 		height: rem(340);
 
 		@media(max-width: $md) {

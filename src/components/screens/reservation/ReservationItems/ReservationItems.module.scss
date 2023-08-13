@@ -1,10 +1,10 @@
 @import '@/assets/styles/vars.scss';
 
 .items {
-	@apply md:space-y-4 space-y-1.5;
+	@apply space-y-4;
 
 	.gridContainer {
-		@apply grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 lg:text-base text-lg;
+		@apply grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 lg:text-base text-lg md:border-b-0 border-b-2 border-grey;
 	}
 
 	.row {

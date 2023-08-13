@@ -3,7 +3,9 @@ const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	future: false,
+	future: {
+		hoverOnlyWhenSupported: true
+	},
 	content: ['./src/**/*.{js,ts,jsx,tsx,mdx}', './app/**/*.{js,ts,jsx,tsx,mdx}'],
 	theme: {
 		colors: {
@@ -49,7 +51,7 @@ module.exports = {
 						backgroundColor: '#f06619'
 					}
 				},
-				
+
 				'.btn-secondary': {
 					color: theme('colors.grey'),
 					backgroundColor: theme('colors.white'),

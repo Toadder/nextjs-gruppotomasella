@@ -34,7 +34,16 @@ module.exports = {
 			},
 			boxShadow: {
 				primary: '0px 5px 10px 4px rgba(0, 0, 0, 0.2)'
-			}
+			},
+			keyframes: {
+				fade: {
+					from: { opacity: 0 },
+					to: { opacity: 1 },
+				},
+			},
+			animation: {
+				fade: 'fade .2s ease-in-out',
+			},
 		}
 	},
 	plugins: [
@@ -85,7 +94,7 @@ module.exports = {
 					objectFit: 'cover',
 					objectPosition: 'center',
 					pointerEvents: 'none'
-				}
+				},
 			});
 		})
 	]

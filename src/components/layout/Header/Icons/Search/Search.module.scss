@@ -7,7 +7,7 @@
 	}
 
 	.main {
-		@apply fixed top-0 left-0 w-full h-full md:bg-opacity-80 md:bg-black bg-white;
+		@apply fixed top-0 left-0 w-full h-full md:bg-opacity-80 md:bg-black bg-white animate-fade;
 	}
 
 	.backdrop {

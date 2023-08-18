@@ -35,21 +35,3 @@ export const fontAwesomeIcons = {
 } as const;
 
 export type FontAwesomeIconName = keyof typeof fontAwesomeIcons;
-
-/*
-	FaCaretDown
-	FaLocationDot
-	FaCartShopping
-	FaTelegram
-	FaWhatsapp
-	FaMagnifyingGlass
-	FaXmark
-	FaFile
-	FaTruckArrowRight
-	FaMinus
-	FaPlus
-	FaEyeSlash
-	FaEye
-	FaArrowLeft
-	FaArrowRight
-*/

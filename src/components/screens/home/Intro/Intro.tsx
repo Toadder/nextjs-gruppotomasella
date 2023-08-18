@@ -34,7 +34,7 @@ const Intro: FC = () => {
 							{({ isActive }) => (
 								<>
 									<IntroCard isActive={isActive} {...slide} />
-									<Image className={styles.bg} src={slide.image} fill alt="" />
+									<Image className={styles.bg} src={slide.image} fill alt="" priority />
 								</>
 							)}
 						</SwiperSlide>

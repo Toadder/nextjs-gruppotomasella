@@ -1,0 +1,7 @@
+.wrapper {
+	@apply flex justify-center;
+
+	.button {
+		@apply btn-primary font-medium py-2 md:px-8 px-2 text-lg md:w-auto w-full;
+	}
+}

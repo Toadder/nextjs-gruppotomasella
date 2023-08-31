@@ -1,16 +1,15 @@
 import { FC } from 'react';
 
-import Pagination from '@/components/ui/Pagination/Pagination';
-
-import AvailableList from './AvailableList';
+import LoadMore from '@/components/ui/LoadMore/LoadMore';
 
 import styles from './AvailableItems.module.scss';
+import AvailableList from './AvailableList';
 
 const AvailableItems: FC = () => {
 	return (
 		<div className={styles.root}>
 			<AvailableList />
-			<Pagination />
+			<LoadMore />
 		</div>
 	);
 };

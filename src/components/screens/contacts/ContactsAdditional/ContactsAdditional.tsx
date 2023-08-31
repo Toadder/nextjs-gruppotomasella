@@ -21,7 +21,7 @@ const ContactsAdditional: FC = () => {
 						<Image
 							src="/static/contacts/image.png"
 							width={627}
-							height={1}
+							height={229}
 							alt=""
 						/>
 					</a>

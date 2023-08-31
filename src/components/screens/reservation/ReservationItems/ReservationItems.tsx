@@ -1,8 +1,10 @@
+import Link from 'next/link';
 import { FC } from 'react';
+
+import { getFormattedPrice } from '@/utils/helpers.util';
 
 import ReservationItem from './ReservationItem';
 import styles from './ReservationItems.module.scss';
-import { getFormattedPrice } from '@/utils/helpers.util'
 
 // FIXME: Пофиксить key={index}
 const ReservationItems: FC = () => {
@@ -19,15 +21,20 @@ const ReservationItems: FC = () => {
 					<div>Цена</div>
 					<div>Сумма</div>
 				</div>
-				{Array(2)
+				{Array(4)
 					.fill('')
 					.map((_, index) => (
 						<ReservationItem key={index} />
 					))}
 			</div>
 			<div className={styles.total}>
-				<div>Итого:</div>
-				<div>{formattedTotal}</div>
+				<div className={styles.totalText}>Итого:</div>
+				<div className={styles.totalSum}>{formattedTotal}</div>
+			</div>
+			<div className={styles.btn}>
+				<Link href="/available" >
+					Вернуться и продолжить выбор
+				</Link>
 			</div>
 		</div>
 	);

@@ -16,11 +16,11 @@
 
 	.card {
 		@apply relative z-1 rounded-xl shadow-primary border-4 border-orange p-3 text-center mx-4 w-full;
-		background-color: rgba(255, 255, 255, 0.9);
+		background-color: rgba(255, 255, 255, 0.75);
 		max-width: rem(350);
 
 		> div {
-			@apply uppercase text-orange font-bold text-lg;
+			@apply uppercase text-orange font-bold text-xl;
 		}
 
 		> ul {
@@ -56,11 +56,7 @@
 	}
 
 	.link {
-		@apply absolute z-1 bottom-0 left-0 w-full text-center transition-all bg-grey text-white py-2.5 hover:bg-[#262626] translate-y-full;
-
-		@media ((any-hover: none) or (max-width: $lg)) {
-			transform: translateY(0);
-		}
+		@apply underline absolute z-1 bottom-0 left-0 w-full text-center text-white py-2.5 transition-opacity hover:opacity-80;
 	}
 
 	.description {

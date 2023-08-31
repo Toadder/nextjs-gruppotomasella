@@ -26,7 +26,7 @@ const SliderArrow: FC<ISliderArrow> = ({ type, sliderRef, className = '' }) => {
 	return <div onClick={handleClick} className={cn(styles.arrow, className, {
 		[styles.next]: type === 'next'
 	})}>
-		<FontAwesomeIcon name='FaArrowLeft' />
+		<FontAwesomeIcon name='FaAngleLeft' />
 	</div>;
 };
 

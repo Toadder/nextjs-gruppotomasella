@@ -1,14 +1,23 @@
 @import '@/assets/styles/vars.scss';
 
+$colWidth: 67.5% / 4;
+
 .items {
-	@apply space-y-4;
+	@apply lg:mt-9 md:mt-5 mt-4;
 
 	.gridContainer {
-		@apply grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 lg:text-base text-lg md:border-b-0 border-b-2 border-grey;
+		@apply grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 lg:text-base text-lg border-2 border-grey;
 	}
 
 	.row {
-		@apply grid lg:grid-cols-6 lg:py-0 py-4 lg:space-y-0 md:space-y-3 space-y-2.5 border-grey;
+		@apply grid lg:py-0 py-4 lg:space-y-0 md:space-y-3 space-y-2.5 border-grey;
+		grid-template-columns:
+			calc($colWidth) calc($colWidth) 19.5% 13% calc($colWidth)
+			calc($colWidth);
+
+		@media (max-width: $lg) {
+			grid-template-columns: 1fr;
+		}
 
 		&:not(:last-child) {
 			@apply lg:border-b-2 md:border-b-0 border-b-2;
@@ -31,7 +40,7 @@
 		}
 
 		&.headings {
-			@apply font-semibold text-center leading-none lg:grid hidden;
+			@apply font-medium text-center leading-none lg:grid hidden;
 		}
 	}
 
@@ -79,10 +88,41 @@
 	}
 
 	.total {
-		@apply text-center lg:text-lg text-2xl flex items-center justify-center gap-x-2 flex-wrap;
+		@apply md:text-base text-lg md:p-0 p-2 flex md:flex-nowrap flex-wrap border-2 border-grey border-t-0;
 
-		> div:nth-child(2) {
-			@apply font-bold;
+		.totalText {
+			@apply md:text-right text-center border-r-2 border-grey md:px-3 md:py-2;
+			flex: 0 0 calc(83.125% + 2px);
+
+			@media (max-width: $lg) {
+				flex: 0 0 50%;
+			}
+
+			@media(max-width: $md) {
+				@apply border-r-0;
+				flex: 0 0 100%;
+			}
+		}
+
+		.totalSum {
+			@apply lg:font-bold lg:text-center md:text-left text-center md:px-3 md:py-2;
+			flex: 0 0 16.875%;
+
+			@media (max-width: $lg) {
+				flex: 0 0 50%;
+			}
+
+			@media(max-width: $md) {
+				flex: 0 0 100%;
+			}
+		}
+	}
+
+	.btn {
+		@apply lg:mt-2 mt-3 flex lg:justify-start justify-center;
+
+		> a {
+			@apply btn-primary rounded-none py-2 px-4 md:w-auto w-full;
 		}
 	}
 }

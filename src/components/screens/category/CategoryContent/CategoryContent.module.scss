@@ -8,12 +8,12 @@
 	}
 
 	.items {
-		@apply grid gap-x-5 lg:gap-y-5 gap-y-4;
+		@apply grid gap-x-5 gap-y-1.5;
 		grid-template-columns: repeat(auto-fit, minmax(rem(240), 1fr));
 	}
 
 	.item {
-		@media(any-hover: hover) {
+		@media (any-hover: hover) {
 			&:hover .image > img {
 				@apply scale-125;
 			}

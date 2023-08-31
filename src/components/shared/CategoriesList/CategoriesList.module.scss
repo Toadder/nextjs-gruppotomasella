@@ -1,0 +1,16 @@
+.root {
+	@apply md:mt-5 mt-4;
+	
+	.list {
+		@apply flex md:flex-wrap whitespace-nowrap gap-y-1.5 md:gap-x-5 gap-x-4 md:overflow-hidden overflow-auto md:pb-0 pb-2;
+	}
+	.item {
+		> a {
+			@apply transition-colors text-grey hover:text-orange whitespace-nowrap;
+
+			&.active {
+				@apply text-orange;
+			}
+		}
+	}
+}

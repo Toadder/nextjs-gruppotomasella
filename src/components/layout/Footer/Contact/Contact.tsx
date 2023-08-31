@@ -3,17 +3,19 @@ import { FC } from 'react';
 
 import { IContact } from './contact.interface';
 
+import styles from './Contact.module.scss';
+
 const Contact: FC<IContact> = ({ title, data }) => {
 	let content: JSX.Element;
 
 	if (typeof data === 'string') {
-		content = <div>{data}</div>;
+		content = <div className={styles.contact}>{data}</div>;
 	} else {
 		content = (
-			<div>
-				{data.map((obj) => (
+			<div className={styles.contact}>
+				{data.map(({ href, text }) => (
 					<div>
-						<Link href={obj.href}>{obj.text}</Link>
+						<Link href={href} className={href.includes('mailto') ? 'text-[#0000FF]' : ''}>{text}</Link>
 					</div>
 				))}
 			</div>

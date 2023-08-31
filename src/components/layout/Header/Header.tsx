@@ -25,9 +25,11 @@ const Header: FC = () => {
 
 	return (
 		<header className={styles.header}>
-			<div className={styles.body}>
-				<HeaderMain isOpen={isOpen} toggleOpen={toggleOpen} />
-				<HeaderMenu isOpen={isOpen} disableOpen={disableOpen} />
+			<div className={styles.inner}>
+				<div className={styles.body}>
+					<HeaderMain isOpen={isOpen} toggleOpen={toggleOpen} />
+					<HeaderMenu isOpen={isOpen} disableOpen={disableOpen} />
+				</div>
 			</div>
 		</header>
 	);

@@ -1,18 +1,16 @@
 @import '@/assets/styles/vars.scss';
 
 .root {
-		@apply md:space-y-7 space-y-5;
+	@apply md:space-y-7 space-y-5;
 
 	.items {
-		@apply grid md:gap-7 gap-5;
+		@apply grid md:gap-x-7 gap-x-5 gap-y-4;
 		grid-template-columns: repeat(auto-fill, minmax(rem(320), 1fr));
 	}
 
 	.item {
-		> a {
-			@apply space-y-3;
-		}
-		
+		@apply relative;
+
 		@media (any-hover: hover) {
 			&:hover {
 				.image > img {
@@ -22,8 +20,12 @@
 		}
 	}
 
+	.sale {
+		@apply absolute z-2 right-2.5 top-2.5 text-white bg-orange rounded-xl py-1 px-3 text-sm font-medium;
+	}
+
 	.image {
-		@apply overflow-hidden;
+		@apply overflow-hidden cursor-grab;
 		height: rem(244);
 
 		> img {
@@ -32,6 +34,22 @@
 	}
 
 	.content {
+		@apply mt-3 space-y-1.5;
+	}
+
+	.main {
 		@apply flex-center-between flex-wrap gap-y-1 gap-x-3 text-xl font-medium leading-snug;
+	}
+
+	.title {
+		@apply cursor-grab;
+	}
+
+	.price {
+		@apply text-orange;
+	}
+
+	.content {
+		@apply text-sm;
 	}
 }

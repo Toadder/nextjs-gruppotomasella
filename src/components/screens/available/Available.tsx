@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import AvailableItems from '@/components/shared/AvailableItems/AvailableItems';
-import CategoriesList from '@/components/shared/CategoriesSlider/CategoriesSlider';
+import CategoriesList from '@/components/shared/CategoriesList/CategoriesList';
 import BorderedHeading from '@/components/ui/Headings/BorderedHeading';
 
 import styles from './Available.module.scss';

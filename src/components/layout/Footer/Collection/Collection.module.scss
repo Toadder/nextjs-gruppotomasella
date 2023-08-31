@@ -2,7 +2,7 @@
 	@apply md:text-left text-center;
 
 	> div {
-		@apply font-semibold lg:text-2xl text-xl uppercase md:block flex items-center justify-center gap-x-1;
+		@apply font-medium lg:text-2xl text-xl uppercase md:block flex items-center justify-center gap-x-1;
 
 		> svg {
 			@apply md:hidden transition-all;

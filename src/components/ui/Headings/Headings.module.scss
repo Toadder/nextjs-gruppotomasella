@@ -1,11 +1,7 @@
-.heading {
-	@apply font-bold lg:text-4xl md:text-3xl text-2xl;
-
-	&.borderedHeading {
-		@apply pb-2 border-b-2 border-grey text-center;
-	}
+.heading, .subheading {
+	@apply font-bold md:text-3xl text-2xl;
 }
 
-.subheading {
-	@apply font-semibold md:text-3xl text-xl;
+.borderedHeading {
+	@apply pb-2 border-b-2 border-grey text-center;
 }

@@ -1,9 +1,9 @@
 @import '@/assets/styles/functions.scss';
 
 .arrow {
-	@apply text-white text-xl flex items-center justify-center cursor-pointer transition-colors btn-primary;
-	width: rem(45);
-	height: rem(45);
+	@apply text-white text-lg flex items-center justify-center cursor-pointer transition-colors border border-white hover:border-orange hover:bg-orange;
+	width: rem(38);
+	height: rem(38);
 
 	&.next {
 		@apply rotate-180;

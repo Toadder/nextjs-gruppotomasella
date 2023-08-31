@@ -3,9 +3,8 @@
 import { FC } from 'react';
 import ReactPaginate from 'react-paginate';
 
-import FontAwesomeIcon from '../Icons/FontAwesomeIcon';
-
 import './Pagination.scss';
+import FontAwesomeIcon from '../Icons/FontAwesomeIcon'
 
 const Pagination: FC = () => {
 	return (
@@ -16,8 +15,7 @@ const Pagination: FC = () => {
 
 			previousLabel={<FontAwesomeIcon name="FaArrowLeft" />}
 			nextLabel={<FontAwesomeIcon name="FaArrowRight" />}
-			
-			
+
 			pageClassName="pagination-item"
 			pageLinkClassName="pagination-link"
 			previousClassName="pagination-prev"

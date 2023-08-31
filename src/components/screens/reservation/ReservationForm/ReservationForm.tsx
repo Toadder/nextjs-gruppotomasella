@@ -11,8 +11,8 @@ import Textarea from '@/components/ui/Inputs/Textarea'
 
 const ReservationForm: FC = () => {
 	return (
-		<AuthCard>
-			<SubHeading title="Оформить заказ" className="text-white" />
+		<AuthCard className={styles.card}>
+			<SubHeading title="Заполните форму и мы вам позвоним." className="text-white" />
 			<form className={styles.form}>
 				<Input placeholder="Фио*" />
 				<Input placeholder="Номер телефона*" />

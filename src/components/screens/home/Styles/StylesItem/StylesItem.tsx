@@ -19,7 +19,7 @@ const StylesItem: FC<IStyle> = ({
 				<StylesCard style={style} categories={categories} />
 				<Image className={styles.bg} src={image} fill alt="" />
 				<a href={catalogUrl} target="_blank" className={styles.link}>
-					Посмотреть каталог
+					посмотреть каталог
 				</a>
 			</div>
 			<p className={styles.description}>{description}</p>

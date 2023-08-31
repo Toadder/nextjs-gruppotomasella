@@ -18,7 +18,7 @@
 
 	.card {
 		@apply relative z-1 text-white lg:px-10 md:px-8 px-6 lg:py-12 md:py-9 py-6 w-full rounded-xl md:text-left text-center;
-		background-color: rgba(0, 0, 0, 0.75);
+		background-color: rgba(0, 0, 0, 0.6);
 		max-width: rem(600);
 
 		&.active {

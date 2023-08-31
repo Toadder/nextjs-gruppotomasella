@@ -1,5 +1,6 @@
 'use client';
 
+import cn from 'classnames';
 import Image from 'next/image';
 import { FC, useRef, useState } from 'react';
 import 'swiper/css';
@@ -7,10 +8,10 @@ import { FreeMode, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as SwiperType } from 'swiper/types';
 
-import cn from 'classnames';
+import FancyboxContainer from '@/components/ui/FancyboxContainer/FancyboxContainer';
+import SliderArrow from '@/components/ui/Slider/SliderArrow';
 
 import styles from './AvailableSlider.module.scss';
-import SliderArrow from '@/components/ui/Slider/SliderArrow'
 
 // FIXME: Пофиксить key={index}
 const AvailableSlider: FC = () => {
@@ -19,40 +20,46 @@ const AvailableSlider: FC = () => {
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
 	return (
-		<div className={cn(styles.slider, {
-			[styles.loaded]: isLoaded
-		})}>
+		<div
+			className={cn(styles.slider, {
+				[styles.loaded]: isLoaded
+			})}
+		>
 			<div className={styles.outer}>
 				<div className={styles.sale}>Скидка 20%</div>
-				<Swiper
-					className={styles.mainSlider}
-					speed={500}
-					onBeforeInit={(swiper) => {
-						sliderRef.current = swiper;
-					}}
-					slidesPerView={1}
-					modules={[Thumbs]}
-					thumbs={{ swiper: thumbsSwiper }}
-					spaceBetween={10}
-					loop={true}
-				>
-					{Array(5)
-						.fill('')
-						.map((_, index) => (
-							<SwiperSlide key={index}>
-								<Image
-									className={styles.image}
-									src="/static/product/main.jpg"
-									width={753}
-									height={452}
-									alt=""
-								/>
-							</SwiperSlide>
-						))}
-				</Swiper>
+				<FancyboxContainer>
+					<Swiper
+						className={styles.mainSlider}
+						speed={500}
+						onBeforeInit={(swiper) => {
+							sliderRef.current = swiper;
+						}}
+						slidesPerView={1}
+						modules={[Thumbs]}
+						thumbs={{ swiper: thumbsSwiper }}
+						spaceBetween={10}
+						loop={true}
+					>
+						{Array(5)
+							.fill('')
+							.map((_, index) => (
+								<SwiperSlide key={index}>
+									<a href="/static/product/main.jpg" data-fancybox="mainSlider">
+										<Image
+											className={styles.image}
+											src="/static/product/main.jpg"
+											width={753}
+											height={452}
+											alt=""
+										/>
+									</a>
+								</SwiperSlide>
+							))}
+					</Swiper>
+				</FancyboxContainer>
 				<div className={styles.arrows}>
-					<SliderArrow type='prev' sliderRef={sliderRef} />
-					<SliderArrow type='next' sliderRef={sliderRef} />
+					<SliderArrow type="prev" sliderRef={sliderRef} />
+					<SliderArrow type="next" sliderRef={sliderRef} />
 				</div>
 			</div>
 
@@ -67,10 +74,10 @@ const AvailableSlider: FC = () => {
 				onInit={() => setIsLoaded(true)}
 				breakpoints={{
 					320: {
-						slidesPerView: 2,
+						slidesPerView: 2
 					},
 					768: {
-						slidesPerView: 4,
+						slidesPerView: 4
 					}
 				}}
 			>

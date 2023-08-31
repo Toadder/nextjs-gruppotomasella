@@ -2,6 +2,7 @@ import { IContact } from './contact.interface';
 
 export const contacts: IContact[] = [
 	{
+		title: 'Тел.:',
 		data: [
 			{
 				text: '+7 (495) 649-20-30',
@@ -14,7 +15,7 @@ export const contacts: IContact[] = [
 		]
 	},
 	{
-		title: 'Email',
+		title: 'Email:',
 		data: [
 			{
 				text: 'b2binterno@mail.ru',
@@ -23,15 +24,15 @@ export const contacts: IContact[] = [
 		]
 	},
 	{
-		title: 'Адрес',
+		title: 'Адрес:',
 		data: 'р. п. Новоивановское, ул. Луговая д. 1'
 	},
 	{
-		title: 'Режим работы',
+		title: 'Режим работы:',
 		data: '10:00 - 21:00 (Пн - Вс)'
 	},
 	{
-		title: 'Магазин',
+		title: 'Магазин:',
 		data: 'ТК "Три Кита", 3-й этаж'
 	}
 ];

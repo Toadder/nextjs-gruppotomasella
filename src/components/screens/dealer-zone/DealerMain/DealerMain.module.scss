@@ -1,0 +1,41 @@
+.factories {
+	@apply flex items-center md:flex-wrap gap-x-3 gap-y-2 md:overflow-hidden overflow-auto md:pb-0 pb-4;
+
+	> li {
+		@apply whitespace-nowrap;
+
+		> button {
+			@apply py-1.5 px-5 border-2 border-grey rounded-xl md:text-lg transition-colors hover:text-white hover:bg-grey;
+		}
+	}
+}
+
+.gridContainer {
+	@apply grid md:grid-cols-2;
+
+	.item {
+		&:nth-child(odd) {
+			@apply md:border-r-2 border-grey;
+		}
+	}
+
+	.title {
+		@apply font-semibold lg:text-2xl text-xl px-4;
+	}
+
+	.files {
+		@apply border-t-2 border-grey py-4 mt-1;
+
+		> li {
+			@apply border-[#f2f2f2] border-t-2;
+
+			&:last-child {
+				@apply border-b-2;
+			}
+
+			> a {
+				@apply flex items-center gap-x-3 whitespace-nowrap py-2 px-4 md:text-lg transition-colors hover:bg-[#f2f2f2];
+			}
+		}
+	}
+}

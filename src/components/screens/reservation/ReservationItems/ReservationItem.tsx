@@ -20,8 +20,8 @@ const ReservationItem: FC = () => {
 				<Link href="/available/product-slug">
 					<Image
 						src="/static/product/main.jpg"
-						width={366}
-						height={210}
+						width={189}
+						height={113}
 						alt=""
 					/>
 				</Link>

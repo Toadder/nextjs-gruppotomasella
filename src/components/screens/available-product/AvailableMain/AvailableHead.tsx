@@ -12,11 +12,11 @@ const AvailableHead: FC = () => {
 
 	return (
 		<div className={styles.head}>
+			<Heading title="Кровать Amami" />
 			<div className={styles.item}>
 				<div>Артикул:</div>
 				<div>65052</div>
 			</div>
-			<Heading title="Кровать Amami" />
 			<div className={styles.prices}>
 				<div className={styles.priceOld}>{oldFormattedPrice}</div>
 				<div>{newFormattedPrice}</div>

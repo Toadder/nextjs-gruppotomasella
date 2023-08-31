@@ -3,6 +3,7 @@ import { FC } from 'react';
 
 import AuthCard from '@/components/ui/AuthCard/AuthCard';
 import SubHeading from '@/components/ui/Headings/SubHeading';
+import Checkbox from '@/components/ui/Inputs/Checkbox';
 import Input from '@/components/ui/Inputs/Input';
 import PasswordInput from '@/components/ui/Inputs/PasswordInput';
 
@@ -15,6 +16,9 @@ const AuthForm: FC = () => {
 			<form className={styles.form}>
 				<Input type="text" placeholder="Имя пользователя*" />
 				<PasswordInput placeholder="Пароль*" />
+				<Checkbox id="remember-me" defaultChecked className="text-white">
+					Запомнить меня
+				</Checkbox>
 				<div className={styles.buttons}>
 					<button type="submit" className={styles.submit}>
 						Войти

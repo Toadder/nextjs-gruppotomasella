@@ -16,9 +16,11 @@ const ProductMain: FC = () => {
 	return (
 		<div className={styles.main}>
 			<div className={styles.mainFlex}>
-				<div>
-					<Heading title="Atlante 001" />
-					<div className={styles.price}>{formattedPrice}</div>
+				<div className={styles.content}>
+					<div className={styles.top}>
+						<Heading title="Atlante 001" className='leading-none' />
+						<div className={styles.price}>{formattedPrice}</div>
+					</div>
 					<Property name="Размер" value="L252 - P40 - H252" />
 					<Property name="Отделка" value="Как на фото" />
 				</div>

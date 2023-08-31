@@ -19,8 +19,13 @@
 	}
 
 	.message {
-		@apply leading-snug mx-auto md:text-sm text-xs;
+		@apply leading-snug mx-auto text-xs md:p-4 p-3 bg-orange text-white rounded-xl;
 		max-width: rem(750);
+		font-size: rem(15);
+
+		@media(max-width: $md) {
+			font-size: rem(14);
+		}
 
 		a {
 			@apply underline inline-block;

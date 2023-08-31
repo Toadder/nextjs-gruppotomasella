@@ -27,7 +27,7 @@
 
 			> a,
 			> span {
-				@apply lg:py-1.5 lg:px-3 lg:text-base md:text-3xl text-2xl cursor-pointer uppercase font-semibold inline-flex items-center gap-x-0.5;
+				@apply lg:py-1.5 lg:px-3 lg:text-base md:text-3xl text-2xl cursor-pointer uppercase inline-flex items-center gap-x-0.5;
 
 				> svg {
 					@apply transition-all;
@@ -71,7 +71,7 @@
 			@apply text-grey;
 
 			> div {
-				@apply uppercase font-semibold;
+				@apply uppercase font-medium;
 				font-size: rem(19);
 
 				@media (max-width: $lg) {

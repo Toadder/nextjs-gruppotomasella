@@ -3,7 +3,7 @@ import { ICollection } from '@/shared/types/collection.types'
 export interface IMenuItem {
 	title: string;
 	link: string;
-	toAnotherSite?: boolean;
+	inFooter?: boolean;
 	onClick?: () => void;
 }
 

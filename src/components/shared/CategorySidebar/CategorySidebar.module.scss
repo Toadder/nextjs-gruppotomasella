@@ -31,7 +31,7 @@
 		}
 
 		> ul {
-			@apply space-y-1;
+			@apply space-y-1 lg:pl-4;
 
 			> li {
 				&:first-child {

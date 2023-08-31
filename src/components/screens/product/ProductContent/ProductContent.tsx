@@ -3,7 +3,7 @@ import ProductGallery from './ProductGallery'
 import ProductMain from './ProductMain'
 
 import styles from './ProductContent.module.scss';
-import ProductImage from './ProductImage'
+import ProductImage from './ProductSlider'
 
 const ProductContent = () => {
 	return (
@@ -11,7 +11,6 @@ const ProductContent = () => {
 			<ProductImage />
 			<ProductMain />
 			<ProductAdditional />
-			<ProductGallery />
 		</div>
 	)
 }

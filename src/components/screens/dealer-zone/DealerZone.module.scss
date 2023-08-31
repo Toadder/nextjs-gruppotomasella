@@ -3,15 +3,11 @@
 		@apply container md:space-y-5 space-y-4;
 	}
 
-	.main {
-		@apply md:space-y-5 space-y-4;
-	}
-
-	.logout {
-		@apply flex justify-center;
+	.greeting {
+		@apply flex md:flex-row flex-col items-center justify-between gap-x-5 flex-wrap gap-y-1.5 md:text-2xl text-xl;
 
 		> button {
-			@apply btn-primary md:text-2xl text-lg md:py-2 py-1.5 md:px-6 px-2 font-semibold md:w-auto w-full;
+			@apply btn-primary md:text-xl text-lg md:py-2 py-1.5 px-7 font-medium md:w-auto w-full;
 		}
 	}
 }

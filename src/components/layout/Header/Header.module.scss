@@ -1,15 +1,19 @@
 @import '@/assets/styles/vars.scss';
 
 .header {
-	@apply lg:pt-7 lg:pb-2 md:py-4 py-3 lg:relative fixed w-full z-3;
+	@apply lg:relative fixed w-full z-3;
 
 	&::before {
 		content: '';
 		@apply bg-white absolute top-0 left-0 z-2 w-full h-full lg:hidden block;
 	}
 
+	.inner {
+		@apply container;
+	}
+
 	.body {
-		@apply container lg:space-y-8;
+		@apply lg:space-y-8 lg:pt-7 lg:pb-2 md:py-4 py-3 lg:border-b-2 border-[#f2f2f2];
 	}
 
 	.main {

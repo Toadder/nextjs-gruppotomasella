@@ -8,6 +8,7 @@ import 'swiper/css/free-mode'
 import 'swiper/css/scrollbar'
 
 import styles from './CategoriesList.module.scss'
+import FontAwesomeIcon from '@/components/ui/Icons/FontAwesomeIcon'
 
 const CategoriesList: FC = () => {
 	return (
@@ -26,6 +27,9 @@ const CategoriesList: FC = () => {
 						</li>
 					))}
 			</ul>
+			<div className={styles.icon}>
+				<FontAwesomeIcon name='FaAnglesLeft' />
+			</div>
 		</div>
 	);
 };

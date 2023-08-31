@@ -1,7 +1,6 @@
 import {
 	FaAngleLeft,
-	FaArrowLeft,
-	FaArrowRight,
+	FaAnglesLeft,
 	FaCaretDown,
 	FaCartShopping,
 	FaEye,
@@ -31,9 +30,8 @@ export const fontAwesomeIcons = {
 	FaPlus,
 	FaEyeSlash,
 	FaEye,
-	FaArrowLeft,
-	FaArrowRight,
-	FaAngleLeft
+	FaAngleLeft,
+	FaAnglesLeft
 } as const;
 
 export type FontAwesomeIconName = keyof typeof fontAwesomeIcons;

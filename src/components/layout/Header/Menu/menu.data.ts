@@ -6,12 +6,12 @@ export const menu: IMenuItem[] = [
 		link: '/available'
 	},
 	{
-		title: 'Матрасы',
-		link: 'https://matrasok.ru'
-	},
-	{
 		title: 'Sale',
 		link: '/sale'
+	},
+	{
+		title: 'Матрасы',
+		link: 'https://matrasok.ru'
 	},
 	{
 		title: 'Оплата',

@@ -1,7 +1,7 @@
 @import '@/assets/styles/vars.scss';
 
 .main {
-	@apply lg:col-span-2 col-span-6 md:space-y-5 space-y-4 flex flex-col justify-center;
+	@apply lg:col-span-2 col-span-6 md:space-y-5 space-y-4 flex flex-col justify-center md:text-center;
 
 	> :not(:first-child) {
 		@apply md:pt-5 pt-4 border-t-2 border-grey;
@@ -11,7 +11,7 @@
 		@apply md:space-y-1 space-y-0.5;
 
 		.item {
-			@apply flex flex-wrap gap-x-2 md:text-xl text-lg;
+			@apply flex flex-wrap md:justify-center gap-x-2 md:text-xl text-lg;
 		}
 
 		.prices {
@@ -35,7 +35,7 @@
 		}
 
 		.link {
-			@apply text-orange flex items-center justify-end pt-4;
+			@apply text-orange items-center justify-end pt-4 hidden;
 
 			a {
 				@apply flex items-center italic gap-x-1 hover:underline;

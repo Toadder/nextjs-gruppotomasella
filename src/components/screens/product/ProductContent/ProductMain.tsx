@@ -18,7 +18,8 @@ const ProductMain: FC = () => {
 			<div className={styles.mainFlex}>
 				<div className={styles.content}>
 					<div className={styles.top}>
-						<Heading title="Atlante 001" className='leading-none' />
+						<Heading title="Atlante 001" className={styles.title} />
+						<div className='md:block hidden'>—</div>
 						<div className={styles.price}>{formattedPrice}</div>
 					</div>
 					<Property name="Размер" value="L252 - P40 - H252" />

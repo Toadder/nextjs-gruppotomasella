@@ -55,7 +55,11 @@
 		}
 
 		.top {
-			@apply md:flex flex-wrap items-center gap-x-9;
+			@apply md:flex flex-wrap items-center gap-x-4;
+		}
+
+		.title {
+			@apply md:text-[1.75rem];
 		}
 
 		.price {

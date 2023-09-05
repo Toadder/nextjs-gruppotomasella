@@ -32,7 +32,7 @@ $colWidth: 67.5% / 4;
 		}
 
 		> * {
-			@apply lg:p-3 md:px-4 flex flex-col items-center justify-center;
+			@apply lg:p-3 md:px-4 px-2.5 flex flex-col items-center justify-center;
 
 			&:not(:first-child) {
 				@apply lg:border-l-2 border-grey;
@@ -45,7 +45,16 @@ $colWidth: 67.5% / 4;
 	}
 
 	.item {
+		@media (max-width: $lg) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.index {
+			@apply absolute left-0 lg:top-0 -top-4 bg-orange text-white lg:text-sm text-lg lg:w-7 lg:h-7 w-10 h-10  flex items-center justify-center z-1;
+		}
+
 		.img {
+			@apply relative lg:col-span-1 col-span-2;
 			a {
 				@apply w-full;
 				height: rem(113);
@@ -61,13 +70,18 @@ $colWidth: 67.5% / 4;
 		}
 
 		.main {
+			@apply lg:flex grid grid-cols-2 gap-x-2 text-center lg:col-span-1 col-span-2;
 			a {
 				@apply underline;
 			}
 		}
 
 		.properties {
-			@apply text-center lg:space-y-1.5 space-y-1;
+			@apply text-center lg:space-y-1.5 lg:flex grid grid-cols-2 gap-x-2 gap-y-1 lg:col-span-1 col-span-2;
+		}
+
+		.property {
+			@apply lg:text-base text-lg flex-col h-full lg:justify-center justify-start;
 		}
 
 		.count {
@@ -83,6 +97,14 @@ $colWidth: 67.5% / 4;
 		.sum {
 			> div:first-child {
 				@apply lg:hidden block;
+			}
+		}
+
+		.sum {
+			@apply lg:col-span-1 col-span-2;
+
+			.sumValue {
+				@apply font-bold;
 			}
 		}
 	}

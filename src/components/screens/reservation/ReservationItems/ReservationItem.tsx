@@ -17,6 +17,7 @@ const ReservationItem: FC = () => {
 		<div className={`${styles.row} ${styles.item}`}>
 			{/* Image */}
 			<div className={styles.img}>
+				<div className={styles.index}>01</div>
 				<Link href="/available/product-slug">
 					<Image
 						src="/static/product/main.jpg"
@@ -38,12 +39,12 @@ const ReservationItem: FC = () => {
 			{/* Properties */}
 			<div className={styles.properties}>
 				<Property
-					className="lg:text-base text-lg justify-center flex-col"
+					className={styles.property}
 					name="Размер"
 					value="190/220 h 110 сп. место - 160/200"
 				/>
 				<Property
-					className="lg:text-base text-lg justify-center flex-col"
+					className={styles.property}
 					name="Отделка"
 					value="Ease 01 (кат 1/Оne)"
 				/>
@@ -69,7 +70,7 @@ const ReservationItem: FC = () => {
 			{/* Total */}
 			<div className={styles.sum}>
 				<div>Сумма:</div>
-				<div>{formattedSum}</div>
+				<div className={styles.sumValue}>{formattedSum}</div>
 			</div>
 		</div>
 	);

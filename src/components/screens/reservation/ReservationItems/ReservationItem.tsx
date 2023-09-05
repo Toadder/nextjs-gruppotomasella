@@ -68,10 +68,10 @@ const ReservationItem: FC = () => {
 			</div>
 
 			{/* Total */}
-			<div className={styles.sum}>
+			{/* <div className={styles.sum}>
 				<div>Сумма:</div>
 				<div className={styles.sumValue}>{formattedSum}</div>
-			</div>
+			</div> */}
 		</div>
 	);
 };

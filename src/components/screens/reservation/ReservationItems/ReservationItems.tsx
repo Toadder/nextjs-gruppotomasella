@@ -19,7 +19,6 @@ const ReservationItems: FC = () => {
 					<div>Характеристики</div>
 					<div>Количество</div>
 					<div>Цена</div>
-					<div>Сумма</div>
 				</div>
 				{Array(4)
 					.fill('')

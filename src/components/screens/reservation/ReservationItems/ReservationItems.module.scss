@@ -69,7 +69,7 @@ $colWidth: 100% / 6;
 		}
 
 		.main {
-			@apply lg:flex grid grid-cols-2 gap-x-2 text-center lg:col-span-1 col-span-2;
+			@apply flex flex-wrap lg:flex-col flex-row lg:justify-center justify-start gap-x-3 text-center lg:col-span-1 col-span-2;
 			a {
 				@apply underline;
 			}
@@ -80,7 +80,15 @@ $colWidth: 100% / 6;
 		}
 
 		.property {
-			@apply lg:text-base text-lg flex-col h-full lg:justify-center justify-start;
+			@apply lg:text-base lg:flex block text-lg h-full lg:justify-center justify-start w-full lg:flex-col flex-row;
+
+			> * {
+				@apply lg:inline-block inline;
+
+				&:last-child {
+					@apply lg:pl-0 pl-2;
+				}
+			}
 		}
 
 		.count {

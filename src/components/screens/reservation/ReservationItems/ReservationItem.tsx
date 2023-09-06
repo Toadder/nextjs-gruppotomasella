@@ -11,7 +11,6 @@ import styles from './ReservationItems.module.scss';
 
 const ReservationItem: FC = () => {
 	const formattedPrice = getFormattedPrice(200_000, 'RUB');
-	const formattedSum = getFormattedPrice(200_000, 'RUB');
 
 	return (
 		<div className={`${styles.row} ${styles.item}`}>
@@ -41,7 +40,12 @@ const ReservationItem: FC = () => {
 				<Property
 					className={styles.property}
 					name="Размер"
-					value="190/220 h 110 сп. место - 160/200"
+					value="190/220 h 110"
+				/>
+				<Property
+					className={styles.property}
+					name="Cп. место"
+					value="160/200"
 				/>
 				<Property
 					className={styles.property}
@@ -66,12 +70,6 @@ const ReservationItem: FC = () => {
 				<div>Цена:</div>
 				<div>{formattedPrice}</div>
 			</div>
-
-			{/* Total */}
-			{/* <div className={styles.sum}>
-				<div>Сумма:</div>
-				<div className={styles.sumValue}>{formattedSum}</div>
-			</div> */}
 		</div>
 	);
 };
